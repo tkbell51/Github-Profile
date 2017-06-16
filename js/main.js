@@ -32,21 +32,17 @@ fetch(urlRepo).then((resp) => resp.json())
     repoLanguage.classList.add('repoLanguage');
     repoLanguage.textContent = repos.language;
     repoList.appendChild(repoLanguage);
-    var circleNode = document.createElement('span');
-    circleNode.height = "5";
-    circleNode.width = '5';
-    repoList.appendChild(circleNode);
+
     var circle = document.createElement('span');
-    circle.height = '10';
-    circle.width = '10';
+    circle.classList.add('circle')
     if (repoLanguage.textContent === "JavaScript"){
-      circle.background = 'yellow';
+      circle.style.backgroundColor = '#F1E05A';
     } else if (repoLanguage.textContent === "HTML"){
-      circle.background = 'red';
+      circle.style.backgroundColor = '#E34C26';
     } else if (repoLanguage.textContent === "CSS"){
-      circle.background = '#563D7C';
+      circle.style.backgroundColor = '#563D7C';
     }
-    circleNode.appendChild(circle);
+    repoList.appendChild(circle);
     var repoUpdate = document.createElement('span');
     repoUpdate.classList.add('repoUpdate');
     var formattedDate = moment(repos.updated_at).fromNow();
@@ -65,24 +61,23 @@ fetch(urlProfile, {headers: headers}).then((resp) => resp.json())
     profPic.alt = "My Picture";
     profileElement.appendChild(profPic);
     var profName = document.createElement('h3');
-    profName.classList.add('name');
-    profName.className = 'name';
+    profName.classList.add('profName');
     profName.textContent = input.name;
     profileElement.appendChild(profName);
     var profUser = document.createElement('h3');
-    profUser.classList.add('User');
+    profUser.classList.add('profUser');
     profUser.textContent = input.login;
     profileElement.appendChild(profUser);
     var profBio = document.createElement('h3');
-    profBio.classList.add('bio');
+    profBio.classList.add('profBio');
     profBio.textContent = input.bio;
     profileElement.appendChild(profBio);
     var profLocation= document.createElement('h3');
-    profLocation.classList.add('location');
+    profLocation.classList.add('profLocation');
     profLocation.textContent = input.location;
     profileElement.appendChild(profLocation);
     var profEmail = document.createElement('a');
-    profEmail.classList.add('email');
+    profEmail.classList.add('profEmail');
     profEmail.href = input.email;
     profEmail.textContent = input.email;
     console.log(input.email);
