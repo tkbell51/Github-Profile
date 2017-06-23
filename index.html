@@ -2,25 +2,41 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title></title>
+  <title>GitHub Repo Profile</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/4.4.0/font/octicons.css">
+  <link rel="stylesheet" href=https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
   <nav>
+
     <div class="nav-content">
+      <a href="#Home"><img src="GitHub-Mark/PNG/GitHub-Mark-Light-32px.png" alt=""></a>
+      <input class="search-bar" type="text" name="search" value="" placeholder="Search Github">
     <a href="#Pull-Request">Pull Request</a>
     <a href="#Issues">Issues</a>
     <a href="#Marketplace">Marketplace</a>
     <a href="#Gist">Gist</a>
 
-    <input class="search-bar" type="text" name="search" value="" placeholder="Search Github">
     </div>
+    <div class="dropDown1">
+
+    <span class="octicon octicon-plus"></span>
+      <span class='octicon octicon-triangle-down'></span>
+
+</div>
+<div class='drowpDown2'>
+  <span class='myPic'></span>
+  <span class='octicon octicon-triangle-down'></span>
+</div>
   </nav>
   <div class="container">
     <div class="row-6">
       <section class="profile">
-
+      <span class='octicon octicon-location'></span>
+      <span class='octicon octicon-mail'></span>
       </section>
       <div class="column2">
         <section class="tabs">
@@ -34,7 +50,7 @@
         <section class="search">
           <input class='tabSearch' type="text" name="" value=""
           placeholder="Search Repositories...">
-          <select value="Type: " name="Type" id="selectType" class="type">
+          <select value="Type: " name="Type" id="selectType" class="type">Type:
             <option value="value1">All</option>
             <option value="value2">Public</option>
             <option value="value3">Private</option>
@@ -48,7 +64,7 @@
             <option value="Value3">HTML</option>
             <option value="Value4">JavaScript</option>
           </select>
-          <button type="button" class="new" value="New">New</button>
+          <button type="button" class=" octicon octicon-repo" value="New">New</button>
         </section>
         <ul class="repoElement">
 
@@ -58,12 +74,16 @@
     </div>
   </div>
   <footer>
+    <div class="footer-content">
     <span>© 2017 GitHub, Inc.</span>
     <a href="#Terms">Terms</a>
     <a href="#Privacy">Privacy</a>
     <a href="#Security">Security</a>
     <a href="#Status">Status</a>
     <a href="#Help">Help</a>
+    <span class='footPic'>
+      <a href="#Home"><img src="GitHub-Mark/PNG/GitHub-Mark-32px.png" alt=""></a>
+    </span>
     <a href="#Contact">Contact</a>
     <a href="#GitHub">GitHub</a>
     <a href="#API">API</a>
@@ -71,6 +91,7 @@
     <a href="#Shop">Shop</a>
     <a href="#Blog">Blog</a>
     <a href="#About">About</a>
+    </div>
   </footer>
   <script src="js/moment.min.js" charset="utf-8"></script>
   <script src="js/token.js" charset="utf-8"></script>
