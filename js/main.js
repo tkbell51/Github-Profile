@@ -79,17 +79,21 @@ console.log(input);
     profBio.textContent = input.bio;
     profileElement.appendChild(profBio);
 
+    var profList = document.createElement('ul');
+    profList.className = "profList";
+    profileElement.appendChild(profList);
 
-    var profLocation= document.createElement('span');
+    var profLocation= document.createElement('li');
     profLocation.classList.add('profLocation');
     profLocation.textContent = input.location;
-    profileElement.appendChild(profLocation);
 
-    var profEmail = document.createElement('a');
+    profList.appendChild(profLocation);
+var profEmail =
+     document.createElement('li');
     profEmail.classList.add('profEmail');
-    profEmail.textContent = input.email;
+    profEmail.textContent = 'tkbell51@gmail.com';
     console.log(input.email);
-    profileElement.appendChild(profEmail);
+    profList.appendChild(profEmail);
 
     var navPic = document.querySelector('.myPic');
     var navProf = document.createElement('img');
@@ -99,9 +103,13 @@ console.log(input);
     navPic.appendChild(navProf);
 
     var octLocation = document.querySelector('.octicon-location');
-    profileElement.insertBefore(octLocation, profLocation);
+    profList.insertBefore(octLocation, profLocation);
+
+
     var octMail = document.querySelector('.octicon-mail');
-    profileElement.insertBefore(octMail, profEmail);
+    profList.insertBefore(octMail, profEmail);
+    var lineBreak = document.createElement('br');
+    profList.insertBefore(lineBreak, octMail);
   });
 
 }());
